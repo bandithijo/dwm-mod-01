@@ -98,6 +98,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY,                       XK_minus, scratchpad_show, {0} },
+	{ MODKEY|ShiftMask,             XK_minus, scratchpad_hide, {0} },
+	{ MODKEY,                       XK_equal,scratchpad_remove,{0} },
 	{ MODKEY,                       XK_Down,   moveresize,     {.v = "  0x  10y   0w   0h" } },
 	{ MODKEY,                       XK_Up,     moveresize,     {.v = "  0x -10y   0w   0h" } },
 	{ MODKEY,                       XK_Right,  moveresize,     {.v = " 10x   0y   0w   0h" } },
