@@ -1,9 +1,11 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const int gappx              = 4;        /* gaps between windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int snap      = 5;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Medium:size=8" };
@@ -24,19 +26,73 @@ static char *colors[][3] = {
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
-	/* xprop(1):
-	 *	WM_CLASS(STRING) = instance, class
-	 *	WM_NAME(STRING) = title
-	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+    /* xprop(1):
+     *	WM_CLASS(STRING) = instance, class
+     *	WM_NAME(STRING) = title
+     */
+    /* class                  instance              title                         tags mask     isfloating   monitor */
+    // Non FLoating
+    { "Gimp-2.10",            NULL,                 NULL,                         0,            0,           -1 },
+    { "firefox",              NULL,                 NULL,                         2,            0,           -1 },
+    { "Chromium-browser",     NULL,                 NULL,                         2,            0,           -1 },
+    { "Google-chrome",        NULL,                 NULL,                         2,            0,           -1 },
+    { "TelegramDesktop",      NULL,                 NULL,                         1 << 7,       0,           -1 },
+    { "Thunderbird",          NULL,                 NULL,                         1 << 6,       0,           -1 },
+    { "Hexchat",              NULL,                 NULL,                         1 << 5,       0,           -1 },
+    { "mpv",                  NULL,                 NULL,                         0,            0,           -1 },
+    { NULL,                   "libreoffice",        NULL,                         0,            0,           -1 },
+    { "Thunar",               "thunar",             NULL,                         1 << 2,       0,           -1 },
+    { "Org.gnome.Nautilus",   NULL,                 NULL,                         1 << 2,       0,           -1 },
+    { "St",                   NULL,                 "neomutt",                    1 << 6,       0,           -1 },
+    { "St",                   NULL,                 "ranger",                     0,            0,           -1 },
+    { "St",                   NULL,                 "newsboat",                   1 << 5,       0,           -1 },
+    { "St",                   NULL,                 "WeeChat",                    1 << 5,       0,           -1 },
+    { "Transmission-gtk",     NULL,                 NULL,                         1 << 5,       0,           -1 },
+    { "Postbird",             NULL,                 NULL,                         0,            0,           -1 },
+    { "xdman-Main",           NULL,                 "XDM 2020",                   0,            0,           -1 },
+    { "Guvcview",             NULL,                 NULL,                         1 << 4,       0,           -1 },
+    { "winword.exe",          NULL,                 NULL,                         0,            0,           -1 },
+    // Floating
+    { "Tor Browser",          "Navigator",          NULL,                         2,            1,           -1 },
+    { "St",                   NULL,                 "st+",                        0,            1,           -1 },
+    { "copyq",                NULL,                 NULL,                         0,            1,           -1 },
+    { "Arandr",               NULL,                 NULL,                         0,            1,           -1 },
+    { "Gcolor3",              NULL,                 "Color picker",               0,            1,           -1 },
+    { "Gnome-calculator",     NULL,                 "Calculator",                 0,            1,           -1 },
+    { "Hexchat",              NULL,                 "Network List - HexChat",     1 << 5,       1,           -1 },
+    { "SimpleScreenRecorder", NULL,                 NULL,                         0,            1,           -1 },
+    { "Soffice",              NULL,                 "Print",                      0,            1,           -1 },
+    { "Chrome",               NULL,                 "Save File",                  2,            1,           -1 },
+    { "Barrier",              NULL,                 NULL,                         1 << 4,       1,           -1 },
+    { "Soffice",              "soffice",            NULL,                         0,            0,           -1 },
+    { "Thunar",               "thunar",             "File Operation Progress",    0,            1,           -1 },
+    { "System-config-printer.py", NULL,             NULL,                         0,            1,           -1 },
+    { "Nm-connection-editor", NULL,                 "Network Connections",        0,            1,           -1 },
+    { "Pavucontrol",          NULL,                 NULL,                         0,            1,           -1 },
+    { "Gpick",                NULL,                 NULL,                         0,            1,           -1 },
+    { "vokoscreen",           NULL,                 NULL,                         0,            1,           -1 },
+    { "Blueman-manager",      NULL,                 NULL,                         0,            1,           -1 },
+    { "Xsane",                NULL,                 "No devices available",       0,            1,           -1 },
+    { "scrcpy",               NULL,                 NULL,                         0,            1,           -1 },
+    { "GParted",              NULL,                 NULL,                         0,            1,           -1 },
+    { "zoom",                 NULL,                 "Question and Answer",        0,            1,           -1 },
+    { "guvcview",             NULL,                 NULL,                         0,            1,           -1 },
+    { "Key-mon",              NULL,                 NULL,                         0,            1,           -1 },
+    { "Gnome-power-statistics", NULL,               NULL,                         0,            1,           -1 },
+    { "firefox",              "Browser",            "About Mozilla Firefox",      0,            1,           -1 },
+    { "Tor Browser",          "Browser",            "About Tor Browser",          0,            1,           -1 },
+    { "xdman-Main",           NULL,                 NULL,                         0,            1,           -1 },
+    { "Gkamus",               NULL,                 NULL,                         0,            1,           -1 },
+    { "Kazam",                NULL,                 NULL,                         0,            1,           -1 },
+    { "Pysheng-gui",          NULL,                 NULL,                         0,            1,           -1 },
+    // Scratchpad
+    { NULL,                   NULL,                 "hidden",       scratchpad_mask,            1,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -48,7 +104,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -140,24 +196,27 @@ static Key keys[] = {
 	{ MODKEY|ControlMask|ShiftMask, XK_Down,   moveresizeedge, {.v = "B"} },
 	{ MODKEY|ControlMask|ShiftMask, XK_Left,   moveresizeedge, {.v = "L"} },
 	{ MODKEY|ControlMask|ShiftMask, XK_Right,  moveresizeedge, {.v = "R"} },
+
+    // Custom Keys
+    /* I have migrated all this custom keys for using with SXHKD */
 };
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
-	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
-	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-	{ ClkClientWin,         MODKEY|ShiftMask, Button3,      dragcfact,      {0} },
-	{ ClkTagBar,            0,              Button1,        view,           {0} },
-	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
-	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+	/* click                event mask        button          function        argument */
+	{ ClkLtSymbol,          0,                Button1,        setlayout,      {0} },
+	{ ClkLtSymbol,          0,                Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkWinTitle,          0,                Button2,        zoom,           {0} },
+	{ ClkStatusText,        0,                Button2,        spawn,          {.v = termcmd } },
+	{ ClkClientWin,         MODKEY,           Button1,        movemouse,      {0} },
+	{ ClkClientWin,         MODKEY,           Button2,        togglefloating, {0} },
+	{ ClkClientWin,         MODKEY,           Button3,        resizemouse,    {0} },
+	{ ClkClientWin,         MODKEY|ShiftMask, Button3,        dragcfact,      {0} },
+	{ ClkTagBar,            0,                Button1,        view,           {0} },
+	{ ClkTagBar,            0,                Button3,        toggleview,     {0} },
+	{ ClkTagBar,            MODKEY,           Button1,        tag,            {0} },
+	{ ClkTagBar,            MODKEY,           Button3,        toggletag,      {0} },
 };
 
 void
