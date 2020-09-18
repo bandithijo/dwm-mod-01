@@ -60,11 +60,13 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *dmenucmd[] = { "dmenu_run", NULL }; /* i'm not using this! */
 static const char *termcmd[]  = { "st", NULL };
 
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_d,      spawn,          SHCMD("/usr/bin/dmenu-apps") },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_g,      center,         {0} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
