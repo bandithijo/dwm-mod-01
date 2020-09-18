@@ -1734,11 +1734,11 @@ tile(Monitor *m)
 	}
 
 	if (n > m->nmaster){
-		mw = m->nmaster ? m->ww * m->mfact : 0;
-		ns = m->nmaster > 0 ? 2 : 1;
+		mw = m->nmaster ? m->ww * m->mfact : m->gappx - 2;
+		ns = 2;
 	}
 	else{
-		mw = m->ww - m->gappx;
+		mw = m->ww;
 		ns = 1;
 	}
 	for (i = 0, my = ty = m->gappx, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
