@@ -2157,9 +2157,15 @@ void
 bstack(Monitor *m)
 {
 	unsigned int i, n, w, mh, mx, tx, ns;
+    float mfacts = 0, sfacts = 0;
 	Client *c;
 
-	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
+	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++) {
+		if (n < m->nmaster)
+			mfacts += c->cfact;
+		else
+			sfacts += c->cfact;
+	}
 	if (n == 0)
 		return;
 	if(n == 1){
@@ -2178,18 +2184,20 @@ bstack(Monitor *m)
 	}
 	for (i = 0, mx = tx = m->gappx, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
 		if (i < m->nmaster) {
-			w = (m->ww - mx) / (MIN(n, m->nmaster) - i) - m->gappx;
+			w = (m->ww - mx) * (c->cfact / mfacts) - m->gappx;
 			resize(c, m->wx + mx, m->wy + m->gappx, w - 2*c->bw, mh - 2*c->bw - m->gappx*(5-ns)/2, 0);
 			if(mx + WIDTH(c) + m->gappx < m->mw)
 				mx += WIDTH(c) + m->gappx;
+			mfacts -= c->cfact;
 		} else {
-			w = (m->ww - tx) / (n - i) - m->gappx;
+			w = (m->ww - tx) * (c->cfact / sfacts) - m->gappx;
 			if(m->nmaster == 0)
 				resize(c, m->wx + tx, m->wy + mh, w - (2*c->bw), m->wh - mh - 2*c->bw - m->gappx, False);
 			else
 				resize(c, m->wx + tx, m->wy + mh + m->gappx/ns, w - (2*c->bw), m->wh - mh - 2*c->bw - m->gappx*(5-ns)/2, False);
 			if (tx + WIDTH(c) + m->gappx < m->mw)
 				tx += WIDTH(c) + m->gappx;
+			sfacts -= c->cfact;
 		}
 }
 
