@@ -90,6 +90,7 @@ static const Rule rules[] = {
     { "Gkamus",               NULL,                 NULL,                         0,            1,           -1 },
     { "Kazam",                NULL,                 NULL,                         0,            1,           -1 },
     { "Pysheng-gui",          NULL,                 NULL,                         0,            1,           -1 },
+    { NULL,                   NULL,                 "xzoom x2",                   0,            1,           -1 },
     // Scratchpad
     { NULL,                   NULL,                 "hidden",       scratchpad_mask,            1,           -1 },
 };
