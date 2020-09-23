@@ -52,7 +52,7 @@ static const Rule rules[] = {
     { "St",                   NULL,                 "ranger",                     0,            0,           -1 },
     { "St",                   NULL,                 "newsboat",                   1 << 5,       0,           -1 },
     { "St",                   NULL,                 "WeeChat",                    1 << 5,       0,           -1 },
-    { "Transmission-gtk",     NULL,                 NULL,                         1 << 5,       0,           -1 },
+    { "Transmission-gtk",     NULL,                 NULL,                         1 << 4,       0,           -1 },
     { "Postbird",             NULL,                 NULL,                         0,            0,           -1 },
     { "xdman-Main",           NULL,                 "XDM 2020",                   0,            0,           -1 },
     { "Guvcview",             NULL,                 NULL,                         1 << 4,       0,           -1 },
