@@ -42,6 +42,7 @@ static const Rule rules[] = {
     { "Chromium-browser",     NULL,                 NULL,                         2,            0,           -1 },
     { "Google-chrome",        NULL,                 NULL,                         2,            0,           -1 },
     { "TelegramDesktop",      NULL,                 NULL,                         1 << 7,       0,           -1 },
+    { "discord",              NULL,                 NULL,                         1 << 7,       0,           -1 },
     { "Thunderbird",          NULL,                 NULL,                         1 << 6,       0,           -1 },
     { "Hexchat",              NULL,                 NULL,                         1 << 5,       0,           -1 },
     { "mpv",                  NULL,                 NULL,                         0,            0,           -1 },
