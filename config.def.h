@@ -9,11 +9,14 @@ static const unsigned int snap      = 5;        /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
-static int showsystray              = 0;     /* 0 means no systray */
+static int showsystray              = 0;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
-static const char *fonts[]          = { "JetBrainsMono Nerd Font Bandit:style=Medium:size=8" };
+static const char *fonts[]          = { "JetBrainsMono Nerd Font Bandit:style=Medium:size=8",
+                                        "Font Awesome 5 Free:style=Regular:size=8",
+                                        "Font Awesome 5 Brands:style=Regular:size=8",
+                                        "octicons:style=Medium:size=8" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font Bandit:style=Medium:size=8";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
