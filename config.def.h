@@ -96,6 +96,7 @@ static const Rule rules[] = {
     { "Pysheng-gui",          NULL,                 NULL,                         0,            1,           -1 },
     { "qtqr",                 NULL,                 NULL,                         0,            1,           -1 },
     { "Mainwindow.py",        NULL,                 "PlayOnLinux",                0,            1,           -1 },
+    { "Florence",             NULL,                 NULL,                         0,            1,           -1 },
     { NULL,                   NULL,                 "xzoom x2",                   0,            1,           -1 },
     // Scratchpad
     { NULL,                   NULL,                 "hidden",       scratchpad_mask,            1,           -1 },
