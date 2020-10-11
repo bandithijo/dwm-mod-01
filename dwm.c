@@ -1727,8 +1727,10 @@ tile(Monitor *m)
 	float mfacts = 0, sfacts = 0;
 	Client *c;
 
-    /* override layout symbol */
-    snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]=", selmon->nmaster);
+    if (selmon->nmaster > 1) {
+        /* override layout symbol */
+        snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]=", selmon->nmaster);
+    }
 
 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++) {
 		if (n < m->nmaster)
