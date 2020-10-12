@@ -1731,7 +1731,7 @@ tile(Monitor *m)
 
     if (selmon->nmaster > 1) {
         /* override layout symbol */
-        snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]=", selmon->nmaster);
+        snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d=", selmon->nmaster);
     }
 
 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++) {
@@ -1770,6 +1770,11 @@ bstack(Monitor *m)
 	unsigned int i, n, w, mh, mx, tx, ns;
     float mfacts = 0, sfacts = 0;
 	Client *c;
+
+    if (selmon->nmaster > 1) {
+        /* override layout symbol */
+        snprintf(m->ltsymbol, sizeof m->ltsymbol, "T%dT", selmon->nmaster);
+    }
 
 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++) {
 		if (n < m->nmaster)
@@ -1819,6 +1824,11 @@ bstackhoriz(Monitor *m)
 	int mx = 0, my = 0, mh = 0, mw = 0;
 	int sx = 0, sy = 0, sh = 0, sw = 0;
 	Client *c;
+
+    if (selmon->nmaster > 1) {
+        /* override layout symbol */
+        snprintf(m->ltsymbol, sizeof m->ltsymbol, "=%d=", selmon->nmaster);
+    }
 
 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
 	if (n == 0)
