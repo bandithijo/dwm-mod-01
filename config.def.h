@@ -93,6 +93,7 @@ static const Rule rules[] = {
     { "Tor Browser",          "Browser",            "About Tor Browser",          0,             0,            1,           -1 },
     { "xdman-Main",           NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Gkamus",               NULL,                 NULL,                         0,             1,            1,           -1 },
+    { "KBBI-Qt",              NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Pysheng-gui",          NULL,                 NULL,                         0,             0,            1,           -1 },
     { "qtqr",                 NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Mainwindow.py",        NULL,                 "PlayOnLinux",                0,             0,            1,           -1 },
