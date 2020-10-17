@@ -1370,8 +1370,6 @@ restack(Monitor *m)
 	}
 	XSync(dpy, False);
 	while (XCheckMaskEvent(dpy, EnterWindowMask, &ev));
-	/* if (m == selmon && (m->tagset[m->seltags] & m->sel->tags) && selmon->lt[selmon->sellt] != &layouts[2]) */
-	/* 	warp(m->sel); */
 }
 
 void
@@ -2056,9 +2054,8 @@ warp(const Client *c)
 {
 	int x, y;
 
-	/* if (!c) { */
-	if (c) {
-		XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww/2, selmon->wy + selmon->wh/2);
+	if (c || !c) {
+		XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww, selmon->wy + selmon->wh);
 		return;
 	}
 
@@ -2070,8 +2067,6 @@ warp(const Client *c)
 	    (y > c->mon->by && y < c->mon->by + bh) ||
 	    (c->mon->topbar && !y))
 		return;
-
-	/* XWarpPointer(dpy, None, c->win, 0, 0, 0, 0, c->w / 2, c->h / 2); */
 }
 
 Client *
