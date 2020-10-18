@@ -210,14 +210,6 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask,              XK_Up,     moveresize,     {.v = "  0x   0y   0w -10h" } },
 	{ MODKEY|Mod1Mask,              XK_Right,  moveresize,     {.v = "  0x   0y  10w   0h" } },
 	{ MODKEY|Mod1Mask,              XK_Left,   moveresize,     {.v = "  0x   0y -10w   0h" } },
-	{ MODKEY|ControlMask,           XK_Up,     moveresizeedge, {.v = "t"} },
-	{ MODKEY|ControlMask,           XK_Down,   moveresizeedge, {.v = "b"} },
-	{ MODKEY|ControlMask,           XK_Left,   moveresizeedge, {.v = "l"} },
-	{ MODKEY|ControlMask,           XK_Right,  moveresizeedge, {.v = "r"} },
-	{ MODKEY|ControlMask|ShiftMask, XK_Up,     moveresizeedge, {.v = "T"} },
-	{ MODKEY|ControlMask|ShiftMask, XK_Down,   moveresizeedge, {.v = "B"} },
-	{ MODKEY|ControlMask|ShiftMask, XK_Left,   moveresizeedge, {.v = "L"} },
-	{ MODKEY|ControlMask|ShiftMask, XK_Right,  moveresizeedge, {.v = "R"} },
 
     // Custom Keys
     /* I have migrated all this custom keys for using with SXHKD */
