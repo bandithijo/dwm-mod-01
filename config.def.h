@@ -97,6 +97,7 @@ static const Rule rules[] = {
     { "Pysheng-gui",          NULL,                 NULL,                         0,             0,            1,           -1 },
     { "qtqr",                 NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Mainwindow.py",        NULL,                 "PlayOnLinux",                0,             0,            1,           -1 },
+    { "ffplay",               NULL,                 NULL,                         0,             0,            1,           -1 },
     { NULL,                   NULL,                 "xzoom x2",                   0,             0,            1,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     // Scratchpad
