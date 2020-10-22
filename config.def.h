@@ -17,8 +17,7 @@ static const char *fonts[]          = { "JetBrainsMono Nerd Font Bandit:style=Me
                                         "Font Awesome 5 Free:style=Regular:size=8",
                                         "Font Awesome 5 Brands:style=Regular:size=8",
                                         "octicons:style=Medium:size=8" };
-static const char dmenufont[]       = "JetBrainsMono Nerd Font Bandit:style=Medium:size=8";
-static char normbgcolor[]           = "#222222";
+static char normbgcolor[]           = "#1e1e1e";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
@@ -136,8 +135,6 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", NULL }; /* i'm not using this! */
 static const char *termcmd[]  = { "st", NULL };
 
 #include "movestack.c"
