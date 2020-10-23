@@ -6,10 +6,6 @@
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const int gappx              = 0;        /* gaps between windows */
 static const unsigned int snap      = 5;        /* snap pixel */
-static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
-static const unsigned int systrayspacing = 2;   /* systray spacing */
-static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
-static int showsystray              = 0;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
@@ -142,7 +138,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("/usr/bin/dmenu-apps") },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-    { MODKEY|ShiftMask,             XK_b,      togglesystray,  {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
