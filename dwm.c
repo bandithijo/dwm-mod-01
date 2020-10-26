@@ -1068,15 +1068,13 @@ manage(Window w, XWindowAttributes *wa)
 	c->sfy = c->y;
 	c->sfw = c->w;
 	c->sfh = c->h;
-	if (c->iscentered) { /* handle floating with add bar height space */
+	if (c->iscentered == 1) { /* handle floating with add bar height space */
 		c->x = c->mon->mx + (c->mon->mw - WIDTH(c)) / 2;
 		c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) / 2 + (bh / 2);
-	}
-    if (c->iscentered == 2) { /* handle floating without add bar height space */
+	} else if (c->iscentered == 2) { /* handle floating without add bar height space */
 		c->x = c->mon->mx + (c->mon->mw - WIDTH(c)) / 2;
 		c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) / 2;
 	}
-
 	XSelectInput(dpy, w, EnterWindowMask|FocusChangeMask|PropertyChangeMask|StructureNotifyMask);
 	grabbuttons(c, 0);
 	if (!c->isfloating)
