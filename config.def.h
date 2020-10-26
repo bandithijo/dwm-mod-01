@@ -96,6 +96,7 @@ static const Rule rules[] = {
     { "Mainwindow.py",        NULL,                 "PlayOnLinux",                0,             0,            1,           -1 },
     { "ffplay",               NULL,                 NULL,                         0,             0,            1,           -1 },
     { NULL,                   NULL,                 "xzoom x2",                   0,             0,            1,           -1 },
+    { "Crow Translate",       NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Dragon-drag-and-drop", NULL,                 NULL,                         0,             1,            1,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     // Scratchpad
