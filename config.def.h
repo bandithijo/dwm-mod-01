@@ -10,7 +10,6 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const char *fonts[]          = { "JetBrainsMono Nerd Font Bandit:style=Medium:size=8",
-                                        "Font Awesome 5 Free:style=Regular:size=8",
                                         "Font Awesome 5 Brands:style=Regular:size=8",
                                         "octicons:style=Medium:size=8" };
 static char normbgcolor[]           = "#1e1e1e";
@@ -98,6 +97,7 @@ static const Rule rules[] = {
     { NULL,                   NULL,                 "xzoom x2",                   0,             0,            1,           -1 },
     { "Crow Translate",       NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Dragon-drag-and-drop", NULL,                 NULL,                         0,             1,            1,           -1 },
+    { "calibre",              NULL,                 NULL,                         0,             1,            1,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     // Scratchpad
     { NULL,                   NULL,                 "hidden",       scratchpad_mask,             0,            1,           -1 },
