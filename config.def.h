@@ -180,6 +180,7 @@ static Key keys[] = {
 	{ MODKEY,                       0x5b,      setgaps,        {.i = -4 } },
 	{ MODKEY,                       0x5d,      setgaps,        {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+    { MODKEY|ControlMask,           XK_space,  focusmaster,    {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
