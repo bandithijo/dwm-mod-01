@@ -83,6 +83,7 @@ static const Rule rules[] = {
     { "scrcpy",               NULL,                 NULL,                         0,             0,            1,           -1 },
     { "GParted",              NULL,                 NULL,                         0,             1,            1,           -1 },
     { "zoom",                 NULL,                 "Question and Answer",        0,             0,            1,           -1 },
+    { "zoom",                 NULL,                 "as_toolbar",                 0,             0,            1,           -1 },
     { "guvcview",             NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Key-mon",              NULL,                 NULL,                         0,             1,            1,           -1 },
     { "Gnome-power-statistics", NULL,               NULL,                         0,             1,            1,           -1 },
