@@ -56,6 +56,8 @@ static const Rule rules[] = {
     { "Guvcview",             NULL,                 NULL,                         1 << 4,        0,            0,           -1 },
     { "winword.exe",          NULL,                 NULL,                         0,             0,            0,           -1 },
     { "calibre",              NULL,                 NULL,                         0,             1,            0,           -1 },
+    { "Soffice",              "soffice",            NULL,                         0,             0,            0,            0 },
+    { "Soffice",              "soffice",            "Presenting: ",               0,             0,            0,            1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     // Floating
     { "TelegramDesktop",      NULL,                 "Media viewer",               1 << 7,        2,            1,           -1 },
