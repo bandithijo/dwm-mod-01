@@ -2055,8 +2055,16 @@ warp(const Client *c)
 	int x, y;
 
 	if (c || !c) {
-        /* ww/2 & wh/2, for centering the cursor position */
-		XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww/2, selmon->wy + selmon->wh/2);
+        if (warpcursorposition == 0) {
+            /* for centering the cursor position when switch focused monitor */
+            XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww/2, selmon->wy + selmon->wh/2);
+        } else if (warpcursorposition == 1) {
+            /* for bottom right the cursor position when switch focused monitor */
+            XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww, selmon->wy + selmon->wh);
+        } else if (warpcursorposition == 2) {
+            /* for bottom center the cursor position when switch focused monitor */
+            XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww/2, selmon->wy + selmon->wh);
+        }
 		return;
 	}
 
