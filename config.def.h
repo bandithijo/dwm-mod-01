@@ -104,6 +104,8 @@ static const Rule rules[] = {
     { "Crow Translate",       NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Dragon-drag-and-drop", NULL,                 NULL,                         0,             1,            1,           -1 },
     { "Colorgrab",            NULL,                 NULL,                         0,             0,            1,           -1 },
+    { "Pidgin",               NULL,                 NULL,                         0,             0,            1,           -1 },
+    { "Pidgin",               NULL,                 "Buddy List",                 0,             0,            1,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     // Scratchpad
     { NULL,                   NULL,                 "hidden",       scratchpad_mask,             0,            1,           -1 },
