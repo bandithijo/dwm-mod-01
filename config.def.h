@@ -126,6 +126,8 @@ static const Layout layouts[] = {
 	{ "===",      bstackhoriz },
  	{ "[@]",      spiral },
  	{ "[\\]",     dwindle },
+	{ "|M|",      centeredmaster },
+	{ ">M>",      centeredfloatingmaster },
 };
 
 /* key definitions */
@@ -174,6 +176,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_u,      setlayout,         {.v = &layouts[4]} },
 	{ MODKEY,                       XK_r,      setlayout,         {.v = &layouts[5]} },
 	{ MODKEY|ShiftMask,             XK_r,      setlayout,         {.v = &layouts[6]} },
+	{ MODKEY,                       XK_n,      setlayout,         {.v = &layouts[7]} },
+	{ MODKEY|ShiftMask,             XK_n,      setlayout,         {.v = &layouts[8]} },
 	{ MODKEY,                       XK_space,  setlayout,         {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating,    {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,     {0} },
