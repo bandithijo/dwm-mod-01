@@ -518,6 +518,11 @@ centeredmaster(Monitor *m)
 	unsigned int i, n, h, mw, mx, my, oty, ety, tw;
 	Client *c;
 
+    if (selmon->nmaster > 1) {
+        /* override layout symbol */
+        snprintf(m->ltsymbol, sizeof m->ltsymbol, "|%d|", selmon->nmaster);
+    }
+
 	/* count number of clients in the selected monitor */
 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
 
@@ -584,6 +589,11 @@ centeredfloatingmaster(Monitor *m)
 {
 	unsigned int i, n, w, mh, mw, mx, mxo, my, myo, tx;
 	Client *c;
+
+    if (selmon->nmaster > 1) {
+        /* override layout symbol */
+        snprintf(m->ltsymbol, sizeof m->ltsymbol, ">%d>", selmon->nmaster);
+    }
 
 	/* count number of clients in the selected monitor */
 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
