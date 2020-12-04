@@ -206,6 +206,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  scratchpad_show,   {0} },
 	{ MODKEY|ShiftMask,             XK_minus,  scratchpad_hide,   {0} },
 	{ MODKEY|ControlMask,           XK_minus,  scratchpad_remove, {0} },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_Down,   aspectresize,      {.i = +10} },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_Up,     aspectresize,      {.i = -10} },
 	{ MODKEY|ShiftMask,             XK_Down,   moveresize,        {.v = "  0x  10y   0w   0h" } },
 	{ MODKEY|ShiftMask,             XK_Up,     moveresize,        {.v = "  0x -10y   0w   0h" } },
 	{ MODKEY|ShiftMask,             XK_Right,  moveresize,        {.v = " 10x   0y   0w   0h" } },
