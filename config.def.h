@@ -27,7 +27,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -182,8 +182,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating,    {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,     {0} },
 	{ MODKEY,                       XK_s,      togglesticky,      {0} },
-	{ MODKEY,                       XK_0,      view,              {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,               {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,          {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,          {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,            {.i = -1 } },
@@ -202,6 +200,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                          6)
 	TAGKEYS(                        XK_8,                          7)
 	TAGKEYS(                        XK_9,                          8)
+	TAGKEYS(                        XK_0,                          9)
 	{ MODKEY|ShiftMask,             XK_q,      quit,              {0} },
 	{ MODKEY,                       XK_minus,  scratchpad_show,   {0} },
 	{ MODKEY|ShiftMask,             XK_minus,  scratchpad_hide,   {0} },
@@ -227,7 +226,7 @@ static Key keys[] = {
     { MODKEY|ControlMask,           XK_m,      movethrow,         {.ui = DIR_C  }},
 
     // Custom Keys
-    /* I have migrated all this custom keys for using with SXHKD */
+    /* I have migrated all this custom keys with SXHKD */
 };
 
 /* button definitions */
