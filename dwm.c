@@ -1209,18 +1209,18 @@ movethrow(const Arg *arg)
     switch(arg->ui) {
         case DIR_N:
             nx = c->x;
-            ny = selmon->wy;
+            ny = selmon->wy + gappx;
             break;
         case DIR_E:
-            nx = selmon->wx + selmon->ww - c->w - c->bw*2;
+            nx = selmon->wx + selmon->ww - c->w - c->bw*2 - gappx;
             ny = c->y;
             break;
         case DIR_S:
             nx = c->x;
-            ny = selmon->wy + selmon->wh - c->h - c->bw*2;
+            ny = selmon->wy + selmon->wh - c->h - c->bw*2 - gappx;
             break;
         case DIR_W:
-            nx = selmon->wx;
+            nx = selmon->wx + gappx;
             ny = c->y;
             break;
         case DIR_C:
