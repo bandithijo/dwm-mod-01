@@ -64,8 +64,8 @@ static const Rule rules[] = {
     // Floating
     { "TelegramDesktop",      NULL,                 "Media viewer",               1 << 7,        2,            1,           -1 },
     { "Tor Browser",          "Navigator",          NULL,                         2,             1,            1,           -1 },
-    { "St",                   NULL,                 "st+",                        0,             1,            1,           -1 },
-    { "St",                   NULL,                 "st+:",                       0,             0,            1,           -1 },
+    { "st-256color",          NULL,                 "st+",                        0,             1,            1,           -1 },
+    { "st-256color",          NULL,                 "st+:",                       0,             0,            1,           -1 },
     { "Arandr",               NULL,                 NULL,                         0,             1,            1,           -1 },
     { "Gcolor3",              NULL,                 "Color Picker",               0,             0,            1,           -1 },
     { "Gcolor3",              NULL,                 "Color picker",               0,             0,            1,           -1 },
