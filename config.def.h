@@ -20,7 +20,7 @@ static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#005f87";
 static char selbgcolor[]            = "#005f87";
-static char *colors[][3] = {
+static char *colors[][3]            = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
@@ -32,10 +32,10 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" }
 static const Rule rules[] = {
     /* xprop(1):
      *	WM_CLASS(STRING) = instance, class
-     *	WM_NAME(STRING) = title
+     *	WM_NAME(STRING)  = title
      */
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
-    // Non FLoating
+    /* Non FLoating */
     { "Gimp-2.10",            NULL,                 NULL,                         0,             0,            0,           -1 },
     { "firefox",              NULL,                 NULL,                         2,             0,            0,           -1 },
     { "Chromium-browser",     NULL,                 NULL,                         2,             0,            0,           -1 },
@@ -48,10 +48,10 @@ static const Rule rules[] = {
     { NULL,                   "libreoffice",        NULL,                         0,             0,            0,           -1 },
     { "Thunar",               "thunar",             NULL,                         1 << 2,        0,            0,           -1 },
     { "Org.gnome.Nautilus",   NULL,                 NULL,                         1 << 2,        0,            0,           -1 },
-    { "St",                   NULL,                 "neomutt",                    1 << 6,        0,            0,           -1 },
-    { "St",                   NULL,                 "ranger",                     0,             0,            0,           -1 },
-    { "St",                   NULL,                 "newsboat",                   1 << 5,        0,            0,           -1 },
-    { "St",                   NULL,                 "WeeChat",                    1 << 5,        0,            0,           -1 },
+    { "st-256color",          NULL,                 "NeoMutt",                    1 << 6,        0,            0,           -1 },
+    { "st-256color",          NULL,                 "Ranger",                     0,             0,            0,           -1 },
+    { "st-256color",          NULL,                 "Newsboat",                   1 << 5,        0,            0,           -1 },
+    { "st-256color",          NULL,                 "WeeChat",                    1 << 5,        0,            0,           -1 },
     { "Transmission-gtk",     NULL,                 NULL,                         1 << 4,        0,            0,           -1 },
     { "Postbird",             NULL,                 NULL,                         0,             0,            0,           -1 },
     { "xdman-Main",           NULL,                 "XDM 2020",                   0,             0,            0,           -1 },
@@ -61,7 +61,7 @@ static const Rule rules[] = {
     { "Soffice",              "soffice",            NULL,                         0,             0,            0,            0 },
     { "Soffice",              "soffice",            "Presenting: ",               0,             0,            0,            1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
-    // Floating
+    /* Floating */
     { "TelegramDesktop",      NULL,                 "Media viewer",               1 << 7,        2,            1,           -1 },
     { "Tor Browser",          "Navigator",          NULL,                         2,             1,            1,           -1 },
     { "st-256color",          NULL,                 "st+",                        0,             1,            1,           -1 },
@@ -107,8 +107,8 @@ static const Rule rules[] = {
     { "Pidgin",               NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Pidgin",               NULL,                 "Buddy List",                 0,             0,            1,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
-    // Scratchpad
-    { NULL,                   NULL,                 "hidden",       scratchpad_mask,             0,            1,           -1 },
+    /* Scratchpad */
+    { NULL,                   NULL,                 "hidden",               scratchpad_mask,     0,            1,           -1 },
 };
 
 /* layout(s) */
