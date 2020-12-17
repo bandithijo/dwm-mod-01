@@ -1718,7 +1718,8 @@ bstack(Monitor *m)
 		return;
 	if(n == 1){
 		c = nexttiled(m->clients);
-		resize(c, m->wx, m->wy, m->ww - 2 * c->bw, m->wh - 2 * c->bw, 0);
+		/* resize(c, m->wx, m->wy, m->ww - 2 * c->bw, m->wh - 2 * c->bw, 0); */
+        resize(c, m->wx + m->gappx, m->wy + m->gappx, m->ww - (2 * c->bw) - m->gappx * 2, m->wh - (2 * c->bw) - m->gappx * 2, 0);
 		return;
 	}
 
@@ -1763,7 +1764,8 @@ bstackhoriz(Monitor *m)
 
 	if (n == 1) {
 		c = nexttiled(m->clients);
-		resize(c, m->wx, m->wy, m->ww - 2 * c->bw, m->wh - 2 * c->bw, 0);
+		/* resize(c, m->wx, m->wy, m->ww - 2 * c->bw, m->wh - 2 * c->bw, 0); */
+        resize(c, m->wx + m->gappx, m->wy + m->gappx, m->ww - (2 * c->bw) - m->gappx * 2, m->wh - (2 * c->bw) - m->gappx * 2, 0);
 		return;
 	}
 
