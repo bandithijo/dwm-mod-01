@@ -69,7 +69,7 @@ static const Rule rules[] = {
     { "Gcolor3",              NULL,                 "Color picker",               0,             0,            1,           -1 },
     { "Gnome-calculator",     NULL,                 "Calculator",                 0,             0,            1,           -1 },
     { "Hexchat",              NULL,                 "Network List - HexChat",     1 << 5,        1,            1,           -1 },
-    { "SimpleScreenRecorder", NULL,                 NULL,                         0,             0,            1,           -1 },
+    { "SimpleScreenRecorder", NULL,                 NULL,                         0,             1,            1,           -1 },
     { "Soffice",              NULL,                 "Print",                      0,             1,            1,           -1 },
     { "Chrome",               NULL,                 "Save File",                  2,             0,            1,           -1 },
     { "Barrier",              NULL,                 NULL,                         1 << 4,        0,            1,           -1 },
