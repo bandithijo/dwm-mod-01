@@ -63,7 +63,7 @@ static const Rule rules[] = {
     { "Soffice",              "soffice",            "Presenting: ",               0,             0,            0,            1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     /* Floating */
-    { "TelegramDesktop",      NULL,                 "Media viewer",               1 << 7,        2,            1,           -1 },
+    { "TelegramDesktop",      NULL,                 "Media viewer",               1 << 7,        1,            1,           -1 },
     { "Tor Browser",          "Navigator",          NULL,                         2,             1,            1,           -1 },
     { "st-256color",          NULL,                 "st+",                        0,             1,            1,           -1 },
     { "st-256color",          NULL,                 "st+:",                       0,             0,            1,           -1 },
