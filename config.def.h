@@ -6,6 +6,7 @@ static const int gappx              = 4;        /* gaps between windows */
 static const unsigned int snap      = 5;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int extrabar           = 1;        /* 0 means no extra bar */
 static const int focusonwheel       = 0;
 static const int maxnmaster         = 4;        /* define limit number of nmaster */
 static const int warpcursorposition = 0;        /* 0 means center, 1 means bottom right, 2 means bottom center */
@@ -150,6 +151,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,             SHCMD("/usr/bin/dmenu-apps") },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,             {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,         {0} },
+	{ MODKEY,                       XK_b,      toggleextrabar,    {0} },
 	{ MODKEY,                       XK_j,      focusstack,        {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,        {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,        {.i = +1 } },
