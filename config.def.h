@@ -11,6 +11,7 @@ static const int user_bh            = 20;       /* 0 means that dwm will calcula
 static const int focusonwheel       = 0;
 static const int maxnmaster         = 4;        /* define limit number of nmaster */
 static const int warpcursorposition = 0;        /* 0 means center, 1 means bottom right, 2 means bottom center */
+static const int decorhints         = 1;        /* 1 means respect decoration hints */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font Bandit:style=Medium:size=8",
                                         "Font Awesome 5 Brands:style=Regular:size=8",
                                         "octicons:style=Medium:size=8" };
