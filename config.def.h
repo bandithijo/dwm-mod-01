@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const int gappx              = 3;        /* gaps between windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const int gappx              = 4;        /* gaps between windows */
 static const unsigned int snap      = 5;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -193,8 +193,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,            {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,            {.i = +1 } },
 	{ MODKEY,                       XK_F5,     xrdb,              {.v = NULL } },
-	{ MODKEY,                       0x5b,      setgaps,           {.i = -3 } },
-	{ MODKEY,                       0x5d,      setgaps,           {.i = +3 } },
+	{ MODKEY,                       0x5b,      setgaps,           {.i = -4 } },
+	{ MODKEY,                       0x5d,      setgaps,           {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,           {.i = 0  } },
     { MODKEY|ControlMask,           XK_space,  focusmaster,       {0} },
 	TAGKEYS(                        XK_1,                          0)
