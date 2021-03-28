@@ -196,16 +196,19 @@ static Key keys[] = {
 	{ MODKEY,                       0x5d,      setgaps,           {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,           {.i = 0  } },
     { MODKEY|ControlMask,           XK_space,  focusmaster,       {0} },
-	TAGKEYS(                        XK_1,                          0)
-	TAGKEYS(                        XK_2,                          1)
-	TAGKEYS(                        XK_3,                          2)
-	TAGKEYS(                        XK_4,                          3)
-	TAGKEYS(                        XK_5,                          4)
-	TAGKEYS(                        XK_6,                          5)
-	TAGKEYS(                        XK_7,                          6)
-	TAGKEYS(                        XK_8,                          7)
-	TAGKEYS(                        XK_9,                          8)
-	TAGKEYS(                        XK_0,                          9)
+	{ MODKEY|Mod1Mask,              0x5b, 	   setborderpx,       {.i = -1 } },
+	{ MODKEY|Mod1Mask,              0x5d, 	   setborderpx,       {.i = +1 } },
+	{ MODKEY|Mod1Mask,              XK_numbersign, 	setborderpx,  {.i = 0 } },
+	TAGKEYS(                        XK_1,                         0)
+	TAGKEYS(                        XK_2,                         1)
+	TAGKEYS(                        XK_3,                         2)
+	TAGKEYS(                        XK_4,                         3)
+	TAGKEYS(                        XK_5,                         4)
+	TAGKEYS(                        XK_6,                         5)
+	TAGKEYS(                        XK_7,                         6)
+	TAGKEYS(                        XK_8,                         7)
+	TAGKEYS(                        XK_9,                         8)
+	TAGKEYS(                        XK_0,                         9)
 	{ MODKEY|ShiftMask,             XK_q,      quit,              {0} },
 	{ MODKEY,                       XK_minus,  scratchpad_show,   {0} },
 	{ MODKEY|ShiftMask,             XK_minus,  scratchpad_hide,   {0} },
