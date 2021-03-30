@@ -197,9 +197,6 @@ static Key keys[] = {
 	{ MODKEY,                       0x5d,      setgaps,           {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,           {.i = 0  } },
     { MODKEY|ControlMask,           XK_space,  focusmaster,       {0} },
-	{ MODKEY|Mod1Mask,              0x5b, 	   setborderpx,       {.i = -1 } },
-	{ MODKEY|Mod1Mask,              0x5d, 	   setborderpx,       {.i = +1 } },
-	{ MODKEY|Mod1Mask,              XK_numbersign, 	setborderpx,  {.i = 0 } },
 	TAGKEYS(                        XK_1,                         0)
 	TAGKEYS(                        XK_2,                         1)
 	TAGKEYS(                        XK_3,                         2)
