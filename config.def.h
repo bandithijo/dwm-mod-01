@@ -112,6 +112,7 @@ static const Rule rules[] = {
     { "Wihotspot-gui",        NULL,                 "Wi Hotspot",                 0,             0,            1,           -1 },
     { "Polkit-mate-authentication-agent-1", NULL,   "Authenticate",               0,             1,            1,           -1 },
     { "Python3",              "SoundConverter",     "SoundConverter",             0,             1,            1,           -1 },
+    { "mpv",                  "gl",                 NULL,                         0,             1,            1,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     /* Scratchpad */
     { NULL,                   NULL,                 "hidden",               scratchpad_mask,     0,            1,           -1 },
