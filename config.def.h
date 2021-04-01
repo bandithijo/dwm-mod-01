@@ -7,7 +7,7 @@ static const unsigned int snap      = 5;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int extrabar           = 1;        /* 0 means no extra bar */
-static const int user_bh            = 20;       /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 24;       /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int focusonwheel       = 0;
 static const int maxnmaster         = 4;        /* define limit number of nmaster */
 static const int warpcursorposition = 0;        /* 0 means center, 1 means bottom right, 2 means bottom center */
