@@ -111,7 +111,7 @@ static const Rule rules[] = {
     { "Pidgin",               NULL,                 "Buddy List",                 0,             0,            1,           -1 },
     { "Wihotspot-gui",        NULL,                 "Wi Hotspot",                 0,             0,            1,           -1 },
     { "Polkit-mate-authentication-agent-1", NULL,   "Authenticate",               0,             1,            1,           -1 },
-    { "Python3",              "SoundConverter",     "SoundConverter",             0,             1,            1,           -1 },
+    { "Soundconverter",       "Soundconverter",     "SoundConverter",             0,             1,            1,           -1 },
     { "mpv",                  "gl",                 NULL,                         0,             1,            1,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     /* Scratchpad */
