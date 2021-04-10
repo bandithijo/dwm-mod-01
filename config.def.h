@@ -79,7 +79,7 @@ static const Rule rules[] = {
     { "Barrier",              NULL,                 NULL,                         1 << 4,        0,            1,           -1 },
     { "Soffice",              "soffice",            NULL,                         0,             0,            0,           -1 },
     { "Thunar",               "thunar",             "File Operation Progress",    0,             0,            1,           -1 },
-    { "System-config-printer.py", NULL,             NULL,                         0,             0,            1,           -1 },
+    { "System-config-printer.py", NULL,             NULL,                         0,             1,            1,           -1 },
     { "Nm-connection-editor", NULL,                 "Network Connections",        0,             0,            1,           -1 },
     { "Pavucontrol",          NULL,                 NULL,                         0,             1,            1,           -1 },
     { "Gpick",                NULL,                 NULL,                         0,             0,            1,           -1 },
