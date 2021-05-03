@@ -236,7 +236,7 @@ static Key keys[] = {
     { MODKEY|ControlMask,           XK_Down,   movethrow,         {.ui = DIR_S  }},
     { MODKEY|ControlMask,           XK_Left,   movethrow,         {.ui = DIR_W  }},
     { MODKEY|ControlMask,           XK_Right,  movethrow,         {.ui = DIR_E  }},
-    { MODKEY|ControlMask,           XK_m,      movethrow,         {.ui = DIR_C  }},
+    { MODKEY|ControlMask,           XK_g,      movethrow,         {.ui = DIR_C  }},
 
     // Custom Keys
     /* I have migrated all this custom keys with SXHKD */
