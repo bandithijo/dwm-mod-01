@@ -42,6 +42,7 @@ static const Rule rules[] = {
     { "Chromium-browser",     NULL,                 NULL,                         2,             0,            0,           -1 },
     { "Google-chrome",        NULL,                 NULL,                         2,             0,            0,           -1 },
     { "TelegramDesktop",      NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
+    { "KotatogramDesktop",    NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
     { "discord",              NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
     { "Thunderbird",          NULL,                 NULL,                         1 << 6,        0,            0,           -1 },
     { "Hexchat",              NULL,                 NULL,                         1 << 5,        0,            0,           -1 },
@@ -65,6 +66,7 @@ static const Rule rules[] = {
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     /* Floating */
     { "TelegramDesktop",      NULL,                 "Media viewer",               1 << 7,        1,            1,           -1 },
+    { "KotatogramDesktop",    NULL,                 "Media viewer",               1 << 7,        1,            1,           -1 },
     { "Tor Browser",          "Navigator",          NULL,                         2,             1,            1,           -1 },
     { "St",                   NULL,                 "st+",                        0,             1,            1,           -1 },
     { "St",                   NULL,                 "st+:",                       0,             0,            1,           -1 },
