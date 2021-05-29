@@ -118,6 +118,7 @@ static const Rule rules[] = {
     { "TelegramDesktop",      "telegram-desktop",   "MARPEL",                     0,             1,            1,           -1 },
     { "Gcr-prompter",         "gcr-prompter",       NULL,                         0,             1,            1,           -1 },
     { "winbox64.exe",         NULL,                 NULL,                         0,             1,            1,           -1 },
+    { "xfreerdp",             "xfreerdp",           "FreeRDP:",                   0,             1,            1,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     /* Scratchpad */
     { NULL,                   NULL,                 "hidden",               scratchpad_mask,     0,            1,           -1 },
