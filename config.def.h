@@ -71,6 +71,7 @@ static const Rule rules[] = {
     { "St",                   NULL,                 "st+",                        0,             1,            1,           -1 },
     { "St",                   NULL,                 "st+:",                       0,             0,            1,           -1 },
     { "Arandr",               NULL,                 NULL,                         0,             1,            1,           -1 },
+    { "Gcolor2",              NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Gcolor3",              NULL,                 "Color Picker",               0,             0,            1,           -1 },
     { "Gcolor3",              NULL,                 "Color picker",               0,             0,            1,           -1 },
     { "Gnome-calculator",     NULL,                 "Calculator",                 0,             0,            1,           -1 },
