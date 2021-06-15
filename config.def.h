@@ -52,7 +52,7 @@ static const Rule rules[] = {
     { "Org.gnome.Nautilus",   NULL,                 NULL,                         1 << 2,        0,            0,           -1 },
     { "St",                   NULL,                 "NeoMutt",                    1 << 6,        0,            0,           -1 },
     { "St",                   NULL,                 "Ranger",                     0,             0,            0,           -1 },
-    { "St",                   NULL,                 "Newsboat",                   1 << 5,        0,            0,           -1 },
+    { "St",                   NULL,                 "NewsBoat",                   1 << 4,        0,            0,           -1 },
     { "St",                   NULL,                 "WeeChat",                    1 << 5,        0,            0,           -1 },
     { "Transmission-gtk",     NULL,                 NULL,                         1 << 4,        0,            0,           -1 },
     { "Postbird",             NULL,                 NULL,                         0,             0,            0,           -1 },
