@@ -44,6 +44,7 @@ static const Rule rules[] = {
     { "TelegramDesktop",      NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
     { "KotatogramDesktop",    NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
     { "discord",              NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
+    { "Slack",                NULL,                 NULL,                         1 << 7,        0,            0,            1 },
     { "Thunderbird",          NULL,                 NULL,                         1 << 6,        0,            0,           -1 },
     { "Hexchat",              NULL,                 NULL,                         1 << 5,        0,            0,           -1 },
     { "mpv",                  NULL,                 NULL,                         0,             0,            0,           -1 },
