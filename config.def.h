@@ -11,7 +11,6 @@ static const int maxnmaster         = 4;        /* define limit number of nmaste
 static const int warpcursorposition = 0;        /* 0 means center, 1 means bottom right, 2 means bottom center */
 static const char *fonts[]          = {
     "JetBrainsMono Nerd Font Bandit:style=Medium:size=8",
-    "Font Awesome 5 Brands:style=Regular:size=8",
     "octicons:style=Medium:size=8"
 };
 static char normbgcolor[]           = "#1e1e1e";
