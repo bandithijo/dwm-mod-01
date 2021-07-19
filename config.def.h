@@ -77,7 +77,7 @@ static const Rule rules[] = {
     { "SimpleScreenRecorder", NULL,                 NULL,                         0,             1,            1,           -1 },
     { "Soffice",              NULL,                 "Print",                      0,             1,            1,           -1 },
     { "Chrome",               NULL,                 "Save File",                  2,             0,            1,           -1 },
-    { "Barrier",              NULL,                 NULL,                         1 << 4,        0,            1,           -1 },
+    { "Barrier",              NULL,                 NULL,                         1 << 3,        0,            1,           -1 },
     { "Soffice",              "soffice",            NULL,                         0,             0,            0,           -1 },
     { "Thunar",               "thunar",             "File Operation Progress",    0,             0,            1,           -1 },
     { "System-config-printer.py", NULL,             NULL,                         0,             1,            1,           -1 },
