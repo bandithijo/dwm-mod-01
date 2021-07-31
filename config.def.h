@@ -125,6 +125,11 @@ static const Rule rules[] = {
     { NULL,                   NULL,                 "hidden",               scratchpad_mask,     0,            1,           -1 },
 };
 
+/* window swallowing */
+static const int swaldecay = 3;
+static const int swalretroactive = 1;
+static const char swalsymbol[] = "&";
+
 /* layout(s) */
 static const float mfact        = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster        = 1;    /* number of clients in master area */
@@ -207,6 +212,7 @@ static Key keys[] = {
 	{ MODKEY,                       0x5d,      setgaps,           {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,           {.i = 0  } },
     { MODKEY|ControlMask,           XK_space,  focusmaster,       {0} },
+	{ MODKEY,                       XK_u,      swalstopsel,       {0} },
 	TAGKEYS(                        XK_1,                         0)
 	TAGKEYS(                        XK_2,                         1)
 	TAGKEYS(                        XK_3,                         2)
@@ -257,6 +263,7 @@ static Button buttons[] = {
 	{ ClkClientWin,         MODKEY,           Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,           Button3,        resizemouse,    {0} },
 	{ ClkClientWin,         MODKEY|ShiftMask, Button3,        dragcfact,      {0} },
+	{ ClkClientWin,         MODKEY|ShiftMask, Button1,        swalmouse,      {0} },
 	{ ClkTagBar,            0,                Button1,        view,           {0} },
 	{ ClkTagBar,            0,                Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,           Button1,        tag,            {0} },
