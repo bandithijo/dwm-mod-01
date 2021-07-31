@@ -67,6 +67,7 @@ enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; /* default atoms *
 enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,
        ClkClientWin, ClkRootWin, ClkLast }; /* clicks */
 enum { ClientRegular = 1, ClientSwallowee, ClientSwallower }; /* client types */
+enum { DIR_N, DIR_W, DIR_C, DIR_E, DIR_S, }; /* coordinates for movethrow */
 
 typedef union {
 	int i;
@@ -215,7 +216,9 @@ static void mappingnotify(XEvent *e);
 static void maprequest(XEvent *e);
 static void monocle(Monitor *m);
 static void motionnotify(XEvent *e);
+static void moveresize(const Arg *arg);
 static void movemouse(const Arg *arg);
+static void movethrow(const Arg *arg);
 static Client *nexttiled(Client *c);
 static void propertynotify(XEvent *e);
 static void quit(const Arg *arg);
@@ -1419,6 +1422,92 @@ movemouse(const Arg *arg)
 		selmon = m;
 		focus(NULL);
 	}
+}
+
+void
+movethrow(const Arg *arg)
+{
+	Client *c;
+	int nh, nw, nx, ny;
+	c = selmon->sel;
+	if (selmon->lt[selmon->sellt]->arrange && !c->isfloating)
+		togglefloating(NULL);
+	nw = c->w;
+	nh = c->h;
+    switch(arg->ui) {
+        case DIR_N:
+            nx = c->x;
+            ny = selmon->wy + gappx;
+            break;
+        case DIR_E:
+            nx = selmon->wx + selmon->ww - c->w - c->bw*2 - gappx;
+            ny = c->y;
+            break;
+        case DIR_S:
+            nx = c->x;
+            ny = selmon->wy + selmon->wh - c->h - c->bw*2 - gappx;
+            break;
+        case DIR_W:
+            nx = selmon->wx + gappx;
+            ny = c->y;
+            break;
+        case DIR_C:
+            nx = selmon->wx + ((selmon->ww - c->w - c->bw*2) / 2);
+            ny = selmon->wy + ((selmon->wh - c->h - c->bw*2) / 2);
+            break;
+        default:
+            return;
+    }
+    resize(c, nx, ny, nw, nh, True);
+}
+
+void
+moveresize(const Arg *arg)
+{
+	/* only floating windows can be moved */
+	Client *c;
+	c = selmon->sel;
+	int x, y, w, h, nx, ny, nw, nh;
+	char xAbs, yAbs, wAbs, hAbs;
+
+	if (!c || !arg)
+		return;
+	if (selmon->lt[selmon->sellt]->arrange && !c->isfloating)
+		return;
+	if (sscanf((char *)arg->v, "%d%c %d%c %d%c %d%c", &x, &xAbs, &y, &yAbs, &w, &wAbs, &h, &hAbs) != 8)
+		return;
+
+	/* compute new window position; prevent window from be positioned outside the current monitor */
+	nw = c->w + w;
+	if (wAbs == 'W')
+		nw = w < selmon->mw - 2 * c->bw ? w : selmon->mw - 2 * c->bw;
+
+	nh = c->h + h;
+	if (hAbs == 'H')
+		nh = h < selmon->mh - 2 * c->bw ? h : selmon->mh - 2 * c->bw;
+
+	nx = c->x + x;
+	if (xAbs == 'X') {
+		if (x < selmon->mx)
+			nx = selmon->mx;
+		else if (x > selmon->mx + selmon->mw)
+			nx = selmon->mx + selmon->mw - nw - 2 * c->bw;
+		else
+			nx = x;
+	}
+
+	ny = c->y + y;
+	if (yAbs == 'Y') {
+		if (y < selmon->my)
+			ny = selmon->my;
+		else if (y > selmon->my + selmon->mh)
+			ny = selmon->my + selmon->mh - nh - 2 * c->bw;
+		else
+			ny = y;
+	}
+
+	XRaiseWindow(dpy, c->win);
+	resize(c, nx, ny, nw, nh, True);
 }
 
 Client *
