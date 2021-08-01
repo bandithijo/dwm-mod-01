@@ -48,6 +48,7 @@ static const Rule rules[] = {
     { NULL,                   "libreoffice",        NULL,                         0,             0,            0,           -1 },
     { "Thunar",               "thunar",             NULL,                         1 << 2,        0,            0,           -1 },
     { "Org.gnome.Nautilus",   NULL,                 NULL,                         1 << 2,        0,            0,           -1 },
+    { "St",                   NULL,                 "st",                         0,             1,            0,           -1 },
     { "St",                   NULL,                 "NeoMutt",                    1 << 6,        0,            0,           -1 },
     { "St",                   NULL,                 "Ranger",                     0,             0,            0,           -1 },
     { "St",                   NULL,                 "NewsBoat",                   1 << 4,        0,            0,           -1 },
