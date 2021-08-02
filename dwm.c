@@ -1526,8 +1526,10 @@ propertynotify(XEvent *e)
 	XPropertyEvent *ev = &e->xproperty;
 
 	if ((ev->window == root) && (ev->atom == XA_WM_NAME)) {
-		if (!fakesignal() || !fake_signal())
+		if (!fake_signal())
 			updatestatus();
+		if (!fakesignal())
+			return;
 	} else if (ev->state == PropertyDelete)
 		return; /* ignore */
 	else if ((c = wintoclient(ev->window))) {
