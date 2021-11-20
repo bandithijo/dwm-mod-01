@@ -123,6 +123,7 @@ static const Rule rules[] = {
     { "winbox64.exe",         NULL,                 NULL,                         0,             1,            1,           -1 },
     { "xfreerdp",             "xfreerdp",           "FreeRDP:",                   0,             1,            1,           -1 },
     { "lxqt-openssh-askpass", NULL,                 NULL,                         0,             1,            1,           -1 },
+    { "Cpupower-gui",         NULL,                 NULL,                         0,             1,            1,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     /* Scratchpad */
     { NULL,                   NULL,                 "hidden",               scratchpad_mask,     0,            1,           -1 },
