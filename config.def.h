@@ -10,8 +10,8 @@ static const int focusonwheel       = 0;
 static const int maxnmaster         = 4;        /* define limit number of nmaster */
 static const int warpcursorposition = 0;        /* 0 means center, 1 means bottom right, 2 means bottom center */
 static const char *fonts[]          = {
-    "JetBrainsMono Nerd Font Bandit:style=Medium:size=8",
-    "octicons:style=Medium:size=8"
+    "JetBrainsMono Nerd Font Bandit:style=Medium:size=10",
+    "octicons:style=Medium:size=10"
 };
 static char normbgcolor[]           = "#1e1e1e";
 static char normbordercolor[]       = "#444444";
