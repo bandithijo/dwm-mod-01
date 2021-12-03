@@ -859,7 +859,8 @@ focusmon(const Arg *arg)
 	unfocus(selmon->sel, 0);
 	selmon = m;
 	focus(NULL);
-	warp(selmon->sel);
+    if (warpenable == 1)
+        warp(selmon->sel);
     arrange(selmon);
 }
 
@@ -2275,7 +2276,16 @@ warp(const Client *c)
 	int x, y;
 
 	if (c || !c) {
-		XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww, selmon->wy + selmon->wh);
+        if (warpcursorposition == 0) {
+            /* for centering the cursor position when switch focused monitor */
+            XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww/2, selmon->wy + selmon->wh/2);
+        } else if (warpcursorposition == 1) {
+            /* for bottom right the cursor position when switch focused monitor */
+            XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww, selmon->wy + selmon->wh);
+        } else if (warpcursorposition == 2) {
+            /* for bottom center the cursor position when switch focused monitor */
+            XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww/2, selmon->wy + selmon->wh);
+        }
 		return;
 	}
 
