@@ -829,7 +829,8 @@ focusmon(const Arg *arg)
 	unfocus(selmon->sel, 0);
 	selmon = m;
 	focus(NULL);
-	warp(selmon->sel);
+    if (warpwenable == 1)
+        warp(selmon->sel);
 }
 
 void
