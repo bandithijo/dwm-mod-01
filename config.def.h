@@ -215,9 +215,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,            {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,            {.i = +1 } },
 	{ MODKEY,                       XK_F5,     xrdb,              {.v = NULL } },
-	{ MODKEY,                       0x5b,      setgaps,           {.i = -1 } },
-	{ MODKEY,                       0x5d,      setgaps,           {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_equal,  setgaps,           {.i = 0  } },
+	{ MODKEY,                       0x5b,      setgaps,           {.i = -7 } },
+	{ MODKEY,                       0x5d,      setgaps,           {.i = +7 } },
+	{ MODKEY|ShiftMask,             XK_equal,  setgaps,           {.i = 7  } },
+    { MODKEY|ControlMask,           XK_equal,  setgaps,           {.i = 0  } },
     { MODKEY|ControlMask,           XK_space,  focusmaster,       {0} },
 	{ MODKEY,                       XK_u,      swalstopsel,       {0} },
 	TAGKEYS(                        XK_1,                         0)
