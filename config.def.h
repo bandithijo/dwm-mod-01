@@ -98,7 +98,7 @@ static const Rule rules[] = {
     { "guvcview",             NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Key-mon",              NULL,                 NULL,                         0,             1,            1,           -1 },
     { "Gnome-power-statistics", NULL,               NULL,                         0,             1,            1,           -1 },
-    { "firefox",              "Browser",            "About Mozilla Firefox",      0,             0,            1,           -1 },
+    { "Firefox",              "Browser",            "About Mozilla Firefox",      0,             0,            1,           -1 },
     { "Tor Browser",          "Browser",            "About Tor Browser",          0,             0,            1,           -1 },
     { "xdman-Main",           NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Gkamus",               NULL,                 NULL,                         0,             1,            1,           -1 },
