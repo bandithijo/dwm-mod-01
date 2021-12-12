@@ -41,7 +41,7 @@ static const Rule rules[] = {
     /* Non FLoating */
     { "Gimp-2.10",            NULL,                 NULL,                         0,             0,            0,           -1 },
     { "Firefox",              NULL,                 NULL,                         2,             0,            0,           -1 },
-    { "Google-chrome",              NULL,                 NULL,                         2,             0,            0,           -1 },
+    { "Google-chrome",        NULL,                 NULL,                         2,             0,            0,           -1 },
     { "qutebrowser",          NULL,                 NULL,                         2,             0,            0,           -1 },
     { "TelegramDesktop",      NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
     { "KotatogramDesktop",    NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
