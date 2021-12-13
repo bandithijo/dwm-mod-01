@@ -9,7 +9,7 @@ static const int user_bh            = 18;       /* bar height */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const int maxnmaster         = 4;        /* define limit number of nmaster */
-static const int warpenable         = 1;        /* 0 means disable, 1 means enable */
+static const int warpenable         = 0;        /* 0 means disable, 1 means enable */
 static const int warpcursorposition = 0;        /* 0 means center, 1 means bottom right, 2 means bottom center */
 static const char *fonts[]          = {
     "JetBrainsMono Nerd Font Bandit:style=Medium:size=10",
