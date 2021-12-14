@@ -8,6 +8,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int user_bh            = 18;       /* bar height */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
+static const int nmaster_symbol     = 0;        /* show n number of master, 0 disable, 1 enable */
 static const int maxnmaster         = 4;        /* define limit number of nmaster */
 static const int warpenable         = 0;        /* 0 means disable, 1 means enable */
 static const int warpcursorposition = 0;        /* 0 means center, 1 means bottom right, 2 means bottom center */
