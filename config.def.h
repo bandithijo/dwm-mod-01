@@ -7,7 +7,6 @@ static const unsigned int snap      = 5;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int user_bh            = 19;       /* bar height, default 18 */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int color_emoji        = 1;        /* show emoji color on status bar, 0 disable, 1 enable */
 static const int focusonwheel       = 0;
 static const int nmaster_symbol     = 0;        /* show n number of master, 0 disable, 1 enable */
 static const int maxnmaster         = 4;        /* define limit number of nmaster */
