@@ -16,6 +16,9 @@ static const unsigned char utfmask[UTF_SIZ + 1] = {0xC0, 0x80, 0xE0, 0xF0, 0xF8}
 static const long utfmin[UTF_SIZ + 1] = {       0,    0,  0x80,  0x800,  0x10000};
 static const long utfmax[UTF_SIZ + 1] = {0x10FFFF, 0x7F, 0x7FF, 0xFFFF, 0x10FFFF};
 
+/* Show emoji color on status bar, 0 disable, 1 enable */
+static const int color_emoji = 1;
+
 static long
 utf8decodebyte(const char c, size_t *i)
 {
@@ -140,7 +143,7 @@ xfont_create(Drw *drw, const char *fontname, FcPattern *fontpattern)
 	 * https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=916349
 	 * and lots more all over the internet.
 	 */
-    if (color_emoji == 0) { /* if 0 = disable color emoji, 1 = enable color emoji */
+    if (color_emoji == 0) { /* Config on drw.c line 19 */
         FcBool iscol;
         if(FcPatternGetBool(xfont->pattern, FC_COLOR, 0, &iscol) == FcResultMatch && iscol) {
             XftFontClose(drw->dpy, xfont);
