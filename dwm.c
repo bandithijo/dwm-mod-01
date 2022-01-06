@@ -718,6 +718,12 @@ drawbar(Monitor *m)
 			urg |= c->tags;
 	}
 	x = 0;
+
+    /* DWM logo left before tags */
+    char *lstext = "   "; /* <- I used JetBrainsMono Nerd Font Bandit */
+	w = blw = TEXTW(lstext);
+	x = drw_text(drw, x, 0, w, bh, lrpad / 2, lstext, 0);
+
 	for (i = 0; i < LENGTH(tags); i++) {
 		w = TEXTW(tags[i]);
 		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
