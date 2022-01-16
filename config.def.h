@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const int gappx              = 3;        /* gaps between windows */
 static const unsigned int snap      = 5;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int user_bh            = 19;       /* bar height, default 18 */
+static const int user_bh            = 20;       /* bar height, default 18 */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const int nmaster_symbol     = 0;        /* show n number of master, 0 disable, 1 enable */
@@ -14,10 +14,11 @@ static const int warpenable         = 0;        /* 0 means disable, 1 means enab
 static const int warpcursorposition = 0;        /* 0 means center, 1 means bottom right, 2 means bottom center */
 static const char *fonts[]          = {
     "JetBrainsMono Nerd Font Bandit:style=Medium:pixelsize=12",
-    "JoyPixels:pixelsize=12:antialias=true:autohint=true",
-    "Noto Color Emoji:style=Regular:pixelsize=12:antialias=true:autohint=true",
-    "octicons:style=Medium:pixelsize=12"
+    "Twemoji:pixelsize=12:antialias=true:autohint=true"
 };
+    /* "JoyPixels:pixelsize=12:antialias=true:autohint=true", */
+    /* "Noto Color Emoji:style=Regular:pixelsize=12:antialias=true:autohint=true", */
+    /* "octicons:style=Medium:pixelsize=12" */
 static char normbgcolor[]           = "#1e1e1e";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
