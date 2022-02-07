@@ -45,6 +45,7 @@ static const Rule rules[] = {
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     /* Non FLoating */
     { "Gimp-2.10",            NULL,                 NULL,                         0,             0,            0,           -1 },
+    { "firefox",              NULL,                 NULL,                         2,             0,            0,           -1 },
     { "Firefox",              NULL,                 NULL,                         2,             0,            0,           -1 },
     { "Google-chrome",        NULL,                 NULL,                         2,             0,            0,           -1 },
     { NULL,                   NULL,                 "Google Chrome",              2,             0,            0,           -1 },
@@ -106,6 +107,7 @@ static const Rule rules[] = {
     { "guvcview",             NULL,                 NULL,                         0,             0,            1,           -1 },
     { "Key-mon",              NULL,                 NULL,                         0,             1,            1,           -1 },
     { "Gnome-power-statistics", NULL,               NULL,                         0,             1,            1,           -1 },
+    { "firefox",              "Browser",            "About Mozilla Firefox",      0,             0,            1,           -1 },
     { "Firefox",              "Browser",            "About Mozilla Firefox",      0,             0,            1,           -1 },
     { "Tor Browser",          "Browser",            "About Tor Browser",          0,             0,            1,           -1 },
     { "xdman-Main",           NULL,                 NULL,                         0,             0,            1,           -1 },
