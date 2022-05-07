@@ -14,10 +14,10 @@ static const int warpenable         = 0;        /* 0 means disable, 1 means enab
 static const int warpcursorposition = 0;        /* 0 means center, 1 means bottom right, 2 means bottom center */
 static const char *fonts[]          = {
     "JetBrainsMono Nerd Font Bandit:style=Medium:pixelsize=12",
-    "JoyPixels:pixelsize=12:antialias=true:autohint=true"
+    "Twitter Color Emoji:pixelsize=12:antialias=true:autohint=true"
 };
-    /* "Twitter Color Emoji:pixelsize=12:antialias=true:autohint=true" */
     /* "Twemoji:pixelsize=12:antialias=true:autohint=true" */
+    /* "JoyPixels:pixelsize=12:antialias=true:autohint=true", */
     /* "Noto Color Emoji:style=Regular:pixelsize=12:antialias=true:autohint=true", */
     /* "octicons:style=Medium:pixelsize=12" */
 static char normbgcolor[]           = "#1e1e1e";
