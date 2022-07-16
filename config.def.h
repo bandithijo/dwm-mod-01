@@ -187,7 +187,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,             SHCMD("/usr/bin/dmenu-apps") },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,             {.v = termcmd } },
-    { MODKEY,                       XK_b,      togglebar,         {0} },
+	{ MODKEY,                       XK_b,      togglebar,         {0} },
 	{ MODKEY,                       XK_j,      focusstack,        {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,        {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,        {.i = +1 } },
@@ -220,7 +220,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating,    {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,     {0} },
 	{ MODKEY,                       XK_s,      togglesticky,      {0} },
-    { MODKEY|ShiftMask,             XK_s,      togglecanfocusfloating, {0} },
+	{ MODKEY|ShiftMask,             XK_s,      togglecanfocusfloating, {0} },
 	{ MODKEY,                       XK_comma,  focusmon,          {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,          {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,            {.i = -1 } },
@@ -229,7 +229,7 @@ static Key keys[] = {
 	{ MODKEY,                       0x5b,      setgaps,           {.i = -9 } },
 	{ MODKEY,                       0x5d,      setgaps,           {.i = +9 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,           {.i = 0  } },
-    { MODKEY|ControlMask,           XK_space,  focusmaster,       {0} },
+	{ MODKEY|ControlMask,           XK_space,  focusmaster,       {0} },
 	{ MODKEY,                       XK_u,      swalstopsel,       {0} },
 	TAGKEYS(                        XK_1,                         0)
 	TAGKEYS(                        XK_2,                         1)
@@ -259,14 +259,14 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask,              XK_Up,     moveresize,        {.v = "  0x   0y   0w -10h" } },
 	{ MODKEY|Mod1Mask,              XK_Right,  moveresize,        {.v = "  0x   0y  10w   0h" } },
 	{ MODKEY|Mod1Mask,              XK_Left,   moveresize,        {.v = "  0x   0y -10w   0h" } },
-    { MODKEY|ControlMask,           XK_Up,     movethrow,         {.ui = DIR_N  }},
-    { MODKEY|ControlMask,           XK_Down,   movethrow,         {.ui = DIR_S  }},
-    { MODKEY|ControlMask,           XK_Left,   movethrow,         {.ui = DIR_W  }},
-    { MODKEY|ControlMask,           XK_Right,  movethrow,         {.ui = DIR_E  }},
-    { MODKEY|ControlMask,           XK_g,      movethrow,         {.ui = DIR_C  }},
+        { MODKEY|ControlMask,           XK_Up,     movethrow,         {.ui = DIR_N  }},
+        { MODKEY|ControlMask,           XK_Down,   movethrow,         {.ui = DIR_S  }},
+        { MODKEY|ControlMask,           XK_Left,   movethrow,         {.ui = DIR_W  }},
+        { MODKEY|ControlMask,           XK_Right,  movethrow,         {.ui = DIR_E  }},
+        { MODKEY|ControlMask,           XK_g,      movethrow,         {.ui = DIR_C  }},
 
-    // Custom Keys
-    /* I have migrated all this custom keys with SXHKD */
+        // Custom Keys
+        /* I have migrated all this custom keys with SXHKD */
 };
 
 /* button definitions */
