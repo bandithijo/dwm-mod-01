@@ -1263,7 +1263,7 @@ quit(const Arg *arg)
 void
 quitprompt(const Arg *arg)
 {
-	FILE *pp = popen("echo -e \"no\nrestart\nyes\" | dmenu -i -sb red -p \"Quit DWM?\"", "r");
+	FILE *pp = popen("echo -e \"no\nyes\" | dmenu -i -p \"Restart DWM?\"", "r");
 	if(pp != NULL) {
 		char buf[1024];
 		if (fgets(buf, sizeof(buf), pp) == NULL) {
@@ -1273,10 +1273,6 @@ quitprompt(const Arg *arg)
 		if (strcmp(buf, "yes\n") == 0) {
 			pclose(pp);
 			restart = 0;
-			quit(NULL);
-		} else if (strcmp(buf, "restart\n") == 0) {
-			pclose(pp);
-			restart = 1;
 			quit(NULL);
 		} else if (strcmp(buf, "no\n") == 0) {
 			pclose(pp);
@@ -2183,7 +2179,7 @@ main(int argc, char *argv[])
 	cleanup();
 	XCloseDisplay(dpy);
 	if (restart == 1) {
-		execlp("dwm", "dwm", NULL);
+		execlp("dwm", NULL);
 	}
 	return EXIT_SUCCESS;
 }
