@@ -3231,7 +3231,7 @@ main(int argc, char *argv[])
 	cleanup();
 	XCloseDisplay(dpy);
 	if (restart == 1) {
-		execlp("dwm", NULL);
+		execlp("dwm", "dwm", NULL);
 	}
 	return EXIT_SUCCESS;
 }
