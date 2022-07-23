@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const int gappx              = 9;        /* gaps between windows */
 static const unsigned int snap      = 5;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int user_bh            = 24;       /* bar height, default 18 */
+static const int user_bh            = 26;       /* bar height, default 18 */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const int nmaster_symbol     = 0;        /* show n number of master, 0 disable, 1 enable */
@@ -13,13 +13,13 @@ static const int maxnmaster         = 4;        /* define limit number of nmaste
 static const int warpenable         = 0;        /* 0 means disable, 1 means enable */
 static const int warpcursorposition = 0;        /* 0 means center, 1 means bottom right, 2 means bottom center */
 static const char *fonts[]          = {
-    "JetBrainsMono Nerd Font Bandit:style=Medium:pixelsize=15",
-    "Twitter Color Emoji:pixelsize=15:antialias=true:autohint=true"
+    "JetBrainsMono Nerd Font Bandit:style=Medium:pixelsize=17",
+    "Twitter Color Emoji:pixelsize=17:antialias=true:autohint=true"
 };
-    /* "Twemoji:pixelsize=15:antialias=true:autohint=true" */
-    /* "JoyPixels:pixelsize=15:antialias=true:autohint=true", */
-    /* "Noto Color Emoji:style=Regular:pixelsize=15:antialias=true:autohint=true", */
-    /* "octicons:style=Medium:pixelsize=15" */
+    /* "Twemoji:pixelsize=17:antialias=true:autohint=true" */
+    /* "JoyPixels:pixelsize=17:antialias=true:autohint=true", */
+    /* "Noto Color Emoji:style=Regular:pixelsize=17:antialias=true:autohint=true", */
+    /* "octicons:style=Medium:pixelsize=17" */
 static char normbgcolor[]           = "#1e1e1e";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
