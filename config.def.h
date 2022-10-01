@@ -6,6 +6,7 @@ static const int gappx              = 9;        /* gaps between windows */
 static const unsigned int snap      = 5;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int user_bh            = 26;       /* bar height, default 18 */
+static const int topbarpadding      = 35;       /* top bar padding, default 0 */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const int nmaster_symbol     = 0;        /* show n number of master, 0 disable, 1 enable */
