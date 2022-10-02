@@ -1724,7 +1724,7 @@ quit(const Arg *arg)
 void
 quitprompt(const Arg *arg)
 {
-	FILE *pp = popen("echo -e \"no\nyes\" | dmenu -i -p \"Restart DWM?\"", "r");
+	FILE *pp = popen("echo -e \"no\nyes\" | rofi -dmenu -i -p \"Restart DWM\" -l 2 -theme-str \'window {width: 18%;}\'", "r");
 	if(pp != NULL) {
 		char buf[1024];
 		if (fgets(buf, sizeof(buf), pp) == NULL) {
