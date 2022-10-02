@@ -31,6 +31,7 @@ static char *colors[][3]            = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
+       [SchemeOff]  = { selbgcolor,  selbgcolor,  selbordercolor  },
 };
 static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,9}, {0,9}, {0,0} }; /* represents the icon as an array of vertices */
 static const XPoint stickyiconbb    = {4,9};	/* defines the bottom right corner of the polygon's bounding box (speeds up scaling) */
