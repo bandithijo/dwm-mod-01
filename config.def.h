@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const int gappx              = 9;        /* gaps between windows */
 static const unsigned int snap      = 5;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int user_bh            = 28;       /* bar height, default 18 */
-static const int topbarpadding      = 37;       /* top bar padding, default 0 */
+static const int user_bh            = 32;       /* bar height, default 18 */
+static const int topbarpadding      = 32;       /* top bar padding, default 0 */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const int nmaster_symbol     = 0;        /* show n number of master, 0 disable, 1 enable */
@@ -55,7 +55,7 @@ static const Rule rules[] = {
     { "TelegramDesktop",      NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
     { "KotatogramDesktop",    NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
     { "discord",              NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
-    { "Slack",                NULL,                 NULL,                         1 << 7,        0,            0,            1 },
+    { "Slack",                NULL,                 NULL,                         1 << 7,        0,            0,           -1 },
     { "Thunderbird",          NULL,                 NULL,                         1 << 6,        0,            0,           -1 },
     { "Hexchat",              NULL,                 NULL,                         1 << 5,        0,            0,           -1 },
     { "mpv",                  NULL,                 NULL,                         0,             0,            0,           -1 },
@@ -75,7 +75,8 @@ static const Rule rules[] = {
     { "calibre",              NULL,                 NULL,                         0,             1,            0,           -1 },
     { "Soffice",              "soffice",            NULL,                         0,             0,            0,            0 },
     { "Soffice",              "soffice",            "Presenting: ",               0,             0,            0,            1 },
-    { "Postman",              NULL,                 NULL,                         0,             0,            0,            1 },
+    { "Postman",              NULL,                 NULL,                         0,             0,            0,           -1 },
+    { "DBeaver",              "DBeaver",            NULL,                         1 << 4,        1,            0,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     /* Floating */
     { "TelegramDesktop",      NULL,                 "Media viewer",               1 << 7,        1,            1,           -1 },
@@ -140,6 +141,7 @@ static const Rule rules[] = {
     { "HDSentinel_GUI",       NULL,                 NULL,                         0,             1,            1,           -1 },
     { "QjackCtl",             NULL,                 NULL,                         0,             1,            1,           -1 },
     { "Xephyr",               NULL,                 NULL,                         0,             1,            1,           -1 },
+    { "Java",                 "java",               "DBeaver ",                   1 << 4,        1,            1,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     /* Scratchpad */
     { NULL,                   NULL,                 "hidden",               scratchpad_mask,     0,            1,           -1 },
