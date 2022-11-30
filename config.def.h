@@ -48,7 +48,9 @@ static const Rule rules[] = {
     /* Non FLoating */
     { "Gimp-2.10",            NULL,                 NULL,                         0,             0,            0,           -1 },
     { "firefox",              NULL,                 NULL,                         2,             0,            0,           -1 },
+    { "firefoxdeveloperedition", NULL,              NULL,                         2,             0,            0,           -1 },
     { "Firefox",              NULL,                 NULL,                         2,             0,            0,           -1 },
+    { "Firefox Developer Edition", NULL,            NULL,                         2,             0,            0,           -1 },
     { "Google-chrome",        NULL,                 NULL,                         2,             0,            0,           -1 },
     { NULL,                   NULL,                 "Google Chrome",              2,             0,            0,           -1 },
     { "qutebrowser",          NULL,                 NULL,                         2,             0,            0,           -1 },
@@ -82,6 +84,7 @@ static const Rule rules[] = {
     { "TelegramDesktop",      NULL,                 "Media viewer",               1 << 7,        1,            1,           -1 },
     { "KotatogramDesktop",    NULL,                 "Media viewer",               1 << 7,        1,            1,           -1 },
     { "firefox",              "Browser",            "About Mozilla Firefox",      0,             0,            1,           -1 },
+    { "firefoxdeveloperedition", "Browser",         "About Firefox Developer Edition", 0,        0,            1,           -1 },
     { "Firefox",              "Browser",            "About Mozilla Firefox",      0,             0,            1,           -1 },
     { "Tor Browser",          "Browser",            "About Tor Browser",          0,             0,            1,           -1 },
     { "Tor Browser",          "Navigator",          NULL,                         2,             1,            1,           -1 },
