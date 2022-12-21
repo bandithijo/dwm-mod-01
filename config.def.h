@@ -101,7 +101,7 @@ static const Rule rules[] = {
     { "Soffice",              NULL,                 "Print",                      0,             1,            1,           -1 },
     { "Chrome",               NULL,                 "Save File",                  2,             0,            1,           -1 },
     { "Barrier",              NULL,                 NULL,                         1 << 3,        0,            1,           -1 },
-    { "Thunar",               "thunar",             "File Operation Progress",    0,             0,            1,           -1 },
+    { "Thunar",               "thunar",             "File Operation Progress",    0,             1,            1,           -1 },
     { "System-config-printer.py", NULL,             NULL,                         0,             1,            1,           -1 },
     { "Nm-connection-editor", NULL,                 "Network Connections",        0,             0,            1,           -1 },
     { "Pavucontrol",          NULL,                 NULL,                         0,             1,            1,           -1 },
