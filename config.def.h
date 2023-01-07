@@ -37,7 +37,8 @@ static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,9}, {0,9}, {0,0} }; /* 
 static const XPoint stickyiconbb    = {4,9};	/* defines the bottom right corner of the polygon's bounding box (speeds up scaling) */
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+static const char     *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+static const int taglayouts[] = {  0,   2,   0,   0,   2,   0,   2,   2,   0,   0 };
 
 static const Rule rules[] = {
     /* xprop(1):
