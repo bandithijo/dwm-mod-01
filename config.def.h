@@ -98,6 +98,7 @@ static const Rule rules[] = {
     { "Gnome-calculator",     NULL,                 "Calculator",                 0,             0,            1,           -1 },
     { "gnome-calculator",     NULL,                 "Calculator",                 0,             0,            1,           -1 },
     { "SimpleScreenRecorder", NULL,                 NULL,                         0,             1,            1,           -1 },
+    { "Mechvibes",            NULL,                 NULL,                         0,             1,            1,           -1 },
     { "Soffice",              "soffice",            NULL,                         0,             0,            0,           -1 },
     { "Soffice",              NULL,                 "Print",                      0,             1,            1,           -1 },
     { "Chrome",               NULL,                 "Save File",                  2,             0,            1,           -1 },
