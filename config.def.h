@@ -146,7 +146,7 @@ static const Rule rules[] = {
     { "HDSentinel_GUI",       NULL,                 NULL,                         0,             1,            1,           -1 },
     { "QjackCtl",             NULL,                 NULL,                         0,             1,            1,           -1 },
     { "Xephyr",               NULL,                 NULL,                         0,             1,            1,           -1 },
-    { "Java",                 "java",               "DBeaver ",                   1 << 4,        1,            1,           -1 },
+    { "Java",                 "java",               "Dbeaver",                    1 << 4,        1,            1,           -1 },
     /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
     /* Scratchpad */
     { NULL,                   NULL,                 "hidden",               scratchpad_mask,     0,            1,           -1 },
