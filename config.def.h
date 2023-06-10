@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const int gappx              = 14;       /* gaps between windows */
+static const int gappx              = 12;       /* gaps between windows */
 static const unsigned int snap      = 5;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int user_bh            = 28;       /* bar height, default 18 */
@@ -236,8 +236,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,            {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,            {.i = +1 } },
 	{ MODKEY,                       XK_F5,     xrdb,              {.v = NULL } },
-	{ MODKEY|ShiftMask,             0x5b,      setgaps,           {.i = -14 } },
-	{ MODKEY|ShiftMask,             0x5d,      setgaps,           {.i = +14 } },
+	{ MODKEY|ShiftMask,             0x5b,      setgaps,           {.i = -12 } },
+	{ MODKEY|ShiftMask,             0x5d,      setgaps,           {.i = +12 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,           {.i = 0  } },
 	{ MODKEY|ControlMask,           XK_space,  focusmaster,       {0} },
 	{ MODKEY,                       XK_u,      swalstopsel,       {0} },
