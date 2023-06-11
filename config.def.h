@@ -226,7 +226,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,      setlayout,         {.v = &layouts[6]} },
 	{ MODKEY|ShiftMask,             XK_m,      setlayout,         {.v = &layouts[7]} },
 	{ MODKEY|ControlMask,           XK_m,      setlayout,         {.v = &layouts[8]} },
-	{ MODKEY,                       XK_space,  setlayout,         {0} },
+	// { MODKEY,                       XK_space,  setlayout,         {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating,    {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,     {0} },
 	{ MODKEY,                       XK_s,      togglesticky,      {0} },
@@ -269,14 +269,14 @@ static const Key keys[] = {
 	{ MODKEY|Mod1Mask,              XK_Up,     moveresize,        {.v = "  0x   0y   0w -10h" } },
 	{ MODKEY|Mod1Mask,              XK_Right,  moveresize,        {.v = "  0x   0y  10w   0h" } },
 	{ MODKEY|Mod1Mask,              XK_Left,   moveresize,        {.v = "  0x   0y -10w   0h" } },
-        { MODKEY|ControlMask,           XK_Up,     movethrow,         {.ui = DIR_N  }},
-        { MODKEY|ControlMask,           XK_Down,   movethrow,         {.ui = DIR_S  }},
-        { MODKEY|ControlMask,           XK_Left,   movethrow,         {.ui = DIR_W  }},
-        { MODKEY|ControlMask,           XK_Right,  movethrow,         {.ui = DIR_E  }},
-        { MODKEY|ControlMask,           XK_g,      movethrow,         {.ui = DIR_C  }},
+    { MODKEY|ControlMask,           XK_Up,     movethrow,         {.ui = DIR_N  }},
+    { MODKEY|ControlMask,           XK_Down,   movethrow,         {.ui = DIR_S  }},
+    { MODKEY|ControlMask,           XK_Left,   movethrow,         {.ui = DIR_W  }},
+    { MODKEY|ControlMask,           XK_Right,  movethrow,         {.ui = DIR_E  }},
+    { MODKEY|ControlMask,           XK_g,      movethrow,         {.ui = DIR_C  }},
 
-        // Custom Keys
-        /* I have migrated all this custom keys with SXHKD */
+    // Custom Keys
+    /* I have migrated all this custom keys with SXHKD */
 };
 
 /* button definitions */
