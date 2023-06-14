@@ -15,8 +15,8 @@ static const int maxnmaster         = 4;        /* define limit number of nmaste
 static const int warpenable         = 0;        /* 0 means disable, 1 means enable */
 static const int warpcursorposition = 0;        /* 0 means center, 1 means bottom right, 2 means bottom center */
 static const char *fonts[]          = {
-    "JetBrainsMono Nerd Font Bandit:style=Medium:pixelsize=15",
-    "Twitter Color Emoji:pixelsize=15:antialias=true:autohint=true"
+    "JetBrainsMono Nerd Font Bandit:style=Medium:pixelsize=17",
+    "Twitter Color Emoji:pixelsize=17:antialias=true:autohint=true"
 };
     /* "Twemoji:pixelsize=17:antialias=true:autohint=true" */
     /* "JoyPixels:pixelsize=17:antialias=true:autohint=true", */
