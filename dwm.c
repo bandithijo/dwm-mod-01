@@ -722,7 +722,11 @@ drawbar(Monitor *m)
 	x = 0;
 
     /* DWM logo left before tags */
-    char *lstext = "    "; /* <- I used JetBrainsMono Nerd Font Bandit */
+    /* <- I used JetBrainsMono Nerd Font Bandit, there are 2 variations: 
+     * 1.      
+     * 2.     
+     * */
+    char *lstext = "    ";
 	w = TEXTW(lstext);
 	x = drw_text(drw, x, 0, w, bh, lrpad / 2, lstext, 0);
 
