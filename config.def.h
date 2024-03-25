@@ -10,7 +10,7 @@ static const int topbarpadding      = 30;       /* top bar padding, default 33 *
 static const int topbarreact        = 0;        /* top bar rectangle, default 0 */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int topbargap          = 6;        /* top bar gap */
-static const int altschemenorm      = 0;        /* 0 default statusbar color center */
+static const int altschemenorm      = 1;        /* 0 default statusbar color center */
 static const int focusonwheel       = 0;
 static const int nmaster_symbol     = 0;        /* show n number of master, 0 disable, 1 enable */
 static const int maxnmaster         = 4;        /* define limit number of nmaster */
@@ -34,7 +34,7 @@ static char *colors[][3]            = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
-       [SchemeOff]  = { selbgcolor,  selbgcolor,  selbordercolor  },
+       [SchemeOff]  = { normbgcolor,  normbgcolor,  selbordercolor  },
 };
 static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,9}, {0,9}, {0,0} }; /* represents the icon as an array of vertices */
 static const XPoint stickyiconbb    = {4,9};	/* defines the bottom right corner of the polygon's bounding box (speeds up scaling) */
