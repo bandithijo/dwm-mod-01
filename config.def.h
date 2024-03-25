@@ -9,6 +9,7 @@ static const int user_bh            = 29;       /* bar height, default 18 */
 static const int topbarpadding      = 30;       /* top bar padding, default 33 */
 static const int topbarreact        = 0;        /* top bar rectangle, default 0 */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbargap          = 6;        /* top bar gap */
 static const int altschemenorm      = 0;        /* 0 default statusbar color center */
 static const int focusonwheel       = 0;
 static const int nmaster_symbol     = 0;        /* show n number of master, 0 disable, 1 enable */
